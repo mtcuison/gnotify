@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mnuMain" onKeyPressed="#mnuMain_KeyPressed" prefHeight="500.0" prefWidth="500.0" stylesheets="@../styles/MainController.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <AnchorPane BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="25.0" prefWidth="1010.0" style="-fx-background-color: BLACK;">
+                                 <children>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="5.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0">
+                                       <image>
+                                          <Image url="@../images/icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="lblFormTitle" layoutX="30.0" layoutY="3.0" prefHeight="3.0" prefWidth="770.0" text="Health Checklist Dashboard" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnExit" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" onAction="#btnExit_Click" prefHeight="16.0" prefWidth="16.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+                                        <graphic>
+                                          <FontAwesomeIconView glyphName="CLOSE" size="14" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="btnMinimize" layoutX="922.0" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" onAction="#btnMinimize_Click" prefHeight="14.0" prefWidth="16.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="4.0">
+                                       <graphic>
+                                          <FontAwesomeIconView glyphName="MINUS" size="14" />
+                                       </graphic>
+                                    </Button>
+                                    <Separator layoutY="23.0" prefWidth="200.0" style="-fx-background-color: ORANGE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="mainTitle" GridPane.rowIndex="1">
+                                 <children>
+                                    <MenuBar fx:id="mnuBar" layoutX="-333.0" prefHeight="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <menus>
+                                          <Menu fx:id="mnuFiles" mnemonicParsing="false" text="File">
+                                             <items>
+                                                <MenuItem fx:id="mnuDashboard" mnemonicParsing="false" onAction="#mnuDashboard_Click" text="Dashboard">
+                                                   <graphic>
+                                                      <Button graphicTextGap="2.0" mnemonicParsing="false">
+                                                         <graphic>
+                                                            <FontAwesomeIconView glyphName="LIST" size="14" />
+                                                         </graphic>
+                                                         <font>
+                                                            <Font size="1.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem fx:id="mnuClose" mnemonicParsing="false" onAction="#mnuClose_Click" text="Exit">
+                                                   <graphic>
+                                                      <Button graphicTextGap="2.0" mnemonicParsing="false">
+                                                         <graphic>
+                                                            <FontAwesomeIconView glyphName="POWER_OFF" size="14" />
+                                                         </graphic>
+                                                         <font>
+                                                            <Font size="1.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                             <graphic>
+                                                <FontAwesomeIconView fx:id="file" glyphName="FOLDER_OPEN" size="14" />
+                                             </graphic>
+                                          </Menu>
+                                       </menus>
+                                    </MenuBar>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <bottom>
+                  <AnchorPane prefHeight="25.0" prefWidth="500.0" style="-fx-background-color: #F37024;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="lblDate" layoutY="6.0" prefHeight="17.0" prefWidth="489.0" text="October 02, 2018 " textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCompany" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="4.0" prefHeight="17.0" prefWidth="489.0" text="Guanzon Merchandising" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblUser" alignment="CENTER_RIGHT" layoutX="400.0" layoutY="4.0" prefHeight="17.0" prefWidth="489.0" text="Cuison, Michael Torres." textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </bottom>
+               <center>
+                  <StackPane fx:id="stackBody" prefHeight="150.0" prefWidth="200.0" />
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

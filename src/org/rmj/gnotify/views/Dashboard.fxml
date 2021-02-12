@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" stylesheets="@../styles/InvMaster.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane>
+               <top>
+                  <AnchorPane prefHeight="25.0" style="-fx-background-color: #000000;">
+                     <children>
+                        <Separator layoutY="25.0" prefHeight="0.0" style="-fx-background-color: orange;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="44.0" layoutY="6.0" text="Health Checklist Dashboard" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefWidth="300.0" style="-fx-background-color: #686868;" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="31.0" layoutY="36.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="205.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="25.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="lblSummary" alignment="CENTER" prefHeight="15.0" prefWidth="304.0" text="Checklist Summary for the Day" GridPane.columnSpan="4" />
+                              <Label id="lblWhite" prefHeight="15.0" prefWidth="265.0" text="Total submitted checklist:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label id="lblWhite" prefHeight="15.0" prefWidth="265.0" text="Total MINOR clients:" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                              <Label id="lblWhite" prefHeight="15.0" prefWidth="265.0" text="Total SENIOR clients:" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                              <Label id="lblWhite" prefHeight="15.0" prefWidth="265.0" text="Clients with HIGH TEMP:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label id="lblWhite" prefHeight="15.0" prefWidth="265.0" text="Clients with SORE THROAT:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label id="lblWhite" prefHeight="15.0" prefWidth="265.0" text="Clients with BODY PAIN:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label id="lblWhite" prefHeight="15.0" prefWidth="265.0" text="Clients with COUGH:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label id="lblWhite" prefHeight="15.0" prefWidth="265.0" text="Clients with COLDS:" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label id="lblWhite" prefHeight="15.0" prefWidth="265.0" text="Clients with HEADACHE:" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Button fx:id="btnTotalList" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnHighTempx" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnSreThroat" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnBodyPainx" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnCoughxxxx" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnColdsxxxx" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnHeadachex" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnMinorsxxx" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="11">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnSeniorsxx" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="12">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                              <Label id="lblWhite" fx:id="lblTotalList" prefHeight="15.0" prefWidth="265.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label id="lblWhite" fx:id="lblHighTempx" prefHeight="15.0" prefWidth="265.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label id="lblWhite" fx:id="lblSreThroat" prefHeight="15.0" prefWidth="265.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <Label id="lblWhite" fx:id="lblBodyPainx" prefHeight="15.0" prefWidth="265.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <Label id="lblWhite" fx:id="lblCoughxxxx" prefHeight="15.0" prefWidth="265.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <Label id="lblWhite" fx:id="lblColdsxxxx" prefHeight="15.0" prefWidth="265.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                              <Label id="lblWhite" fx:id="lblHeadachex" prefHeight="15.0" prefWidth="265.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                              <Label id="lblWhite" fx:id="lblMinorsxxx" prefHeight="15.0" prefWidth="265.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                              <Label id="lblWhite" fx:id="lblSeniorsxx" prefHeight="15.0" prefWidth="265.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #B3B6B7;" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="tblDetail" onMouseClicked="#tblDetail_Click" prefHeight="193.0" prefWidth="640.0" stylesheets="@../styles/Tables.css" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <columns>
+                              <TableColumn fx:id="index01" prefWidth="30.0" resizable="false" sortable="false" text="NO." />
+                              <TableColumn fx:id="index02" prefWidth="225.0" resizable="false" sortable="false" text="Branch" />
+                              <TableColumn fx:id="index03" prefWidth="230.0" resizable="false" sortable="false" text="Name" />
+                              <TableColumn fx:id="index04" prefWidth="150.0" resizable="false" sortable="false" text="Submitted" />
+                           </columns>
+                        </TableView>
+                        <GridPane layoutX="10.0" layoutY="214.0" AnchorPane.leftAnchor="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="15.0" prefWidth="265.0" text="Temperature:" GridPane.rowIndex="3" />
+                              <Label prefHeight="15.0" prefWidth="265.0" text="Fullname:" GridPane.rowIndex="1" />
+                              <Label prefHeight="15.0" prefWidth="265.0" text="Gender:" GridPane.rowIndex="2" />
+                              <Label prefHeight="15.0" prefWidth="265.0" text="Mobile No.:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label prefHeight="15.0" prefWidth="265.0" text="Age:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label prefHeight="15.0" prefWidth="265.0" text="Address:" GridPane.rowIndex="4" />
+                              <Label prefHeight="15.0" prefWidth="265.0" text="1. Experiencing:" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                              <Label prefHeight="15.0" prefWidth="265.0" text="Branch:" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="149.0" text="SORE THROAT:" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="149.0" text="BODY PAINS:" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="149.0" text="COUGH:" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="149.0" text="COLDS:" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="149.0" text="HEADACHE:" GridPane.rowIndex="11" />
+                              <Label prefHeight="46.0" prefWidth="717.0" text="2. Worked together or stayed in the same close environment of a confirmed COVID-19 case:" wrapText="true" GridPane.columnSpan="7" GridPane.rowIndex="13" />
+                              <Label prefHeight="46.0" prefWidth="717.0" text="3. Had any contact with anyone with fever, cough, colds, and/or sore throat in the past 2 weeks:" wrapText="true" GridPane.columnSpan="7" GridPane.rowIndex="14" />
+                              <Label prefHeight="46.0" prefWidth="717.0" text="4. Travelled outside the Philippines in the last 14 days:" wrapText="true" GridPane.columnSpan="7" GridPane.rowIndex="15" />
+                              <Label prefHeight="46.0" prefWidth="717.0" text="5. Travelled to any area in NCR aside from home:" wrapText="true" GridPane.columnSpan="7" GridPane.rowIndex="16" />
+                              <Label fx:id="cWithSore" alignment="CENTER" prefHeight="15.0" prefWidth="149.0" text="NO" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label fx:id="cWithPain" alignment="CENTER" prefHeight="15.0" prefWidth="149.0" text="NO" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label fx:id="cWithCghx" alignment="CENTER" prefHeight="15.0" prefWidth="149.0" text="NO" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Label fx:id="cWithCold" alignment="CENTER" prefHeight="15.0" prefWidth="149.0" text="NO" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <Label fx:id="cWithHdch" alignment="CENTER" prefHeight="15.0" prefWidth="149.0" text="NO" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                              <Label fx:id="cStayedxx" alignment="CENTER" prefHeight="15.0" prefWidth="149.0" text="NO" GridPane.columnIndex="7" GridPane.rowIndex="13" />
+                              <Label fx:id="cContactx" alignment="CENTER" prefHeight="15.0" prefWidth="149.0" text="NO" GridPane.columnIndex="7" GridPane.rowIndex="14" />
+                              <Label fx:id="cTravelld" alignment="CENTER" prefHeight="15.0" prefWidth="149.0" text="NO" GridPane.columnIndex="7" GridPane.rowIndex="15" />
+                              <Label fx:id="cTravlNCR" alignment="CENTER" prefHeight="15.0" prefWidth="149.0" text="NO" GridPane.columnIndex="7" GridPane.rowIndex="16" />
+                              <Label fx:id="sBranchNm" prefHeight="15.0" prefWidth="334.0" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+                              <Label fx:id="sFullName" prefHeight="15.0" prefWidth="334.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                              <Label fx:id="cGenderCd" prefHeight="15.0" prefWidth="334.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="nTemprtre" prefHeight="15.0" prefWidth="334.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="nCltAgexx" prefHeight="15.0" prefWidth="334.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Label fx:id="sMobileNo" prefHeight="15.0" prefWidth="334.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Label fx:id="sAddressx" prefHeight="15.0" prefWidth="597.0" GridPane.columnIndex="1" GridPane.columnSpan="6" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+    </children>
+</AnchorPane>

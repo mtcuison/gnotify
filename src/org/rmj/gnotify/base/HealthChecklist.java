@@ -161,7 +161,7 @@ public class HealthChecklist extends TimerTask implements iDashboard{
                         " WHERE a.sBranchCd = b.sBranchCd" +
                             " AND a.dSubmittd >= " + SQLUtil.toSQL(SQLUtil.dateFormat(poGRider.getServerDate(), SQLUtil.FORMAT_SHORT_DATE) + " 00:00:01" ) +
                             " AND a.cRecdStat = '1'" +
-                        " ORDER BY a.dSubmittd";
+                        " ORDER BY b.sBranchNm";
         
         if (fsField.isEmpty() && !fsValue.isEmpty()){
             lsSQL = MiscUtil.addCondition(lsSQL, fsValue);

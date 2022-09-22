@@ -124,14 +124,14 @@ public class MDIMainController implements Initializable {
     @FXML
     private void mnuClose_Click(ActionEvent event) throws IOException {
         if (MsgBox.showYesNo("Are you sure you want to exit?") == MsgBox.RESP_YES_OK){
-            CommonUtils.closeStage(btnExit);
+            CommonUtils.closeStage(btnExit); //btnExit is the name of button
             System.exit(0);
         }   
     }
 
     @FXML
     private void btnMinimize_Click(ActionEvent event) {
-        CommonUtils.minimizeStage(btnMinimize);
+        CommonUtils.minimizeStage(btnMinimize); //btnMinimize is th name of button
     }
 
     @FXML
@@ -246,6 +246,7 @@ public class MDIMainController implements Initializable {
         } catch (IOException ex) {
             System.err.println(ex.getMessage());
         }
+        
         return null;
     }
     
